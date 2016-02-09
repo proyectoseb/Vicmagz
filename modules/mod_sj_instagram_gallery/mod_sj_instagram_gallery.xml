@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.3" client="site" method="upgrade">
+    <name>SJ Instagram Gallery</name>
+    <creationDate>December 2015</creationDate>
+    <author>YouTech Company</author>
+    <copyright>Copyright (c) 2015 YouTech Company</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <authorEmail>contact@ytcvn.com</authorEmail>
+    <authorUrl>http://www.smartaddons.com</authorUrl>
+    <version>1.0.0</version>
+    <description>TPL_YTFRAMEWORK_XML_DESCRIPTION</description>
+    <files>
+        <filename module="mod_sj_instagram_gallery">mod_sj_instagram_gallery.php</filename>
+        <filename>index.html</filename>
+        <folder>assets</folder>
+        <folder>core</folder>
+        <folder>language</folder>
+        <folder>tmpl</folder>
+    </files>
+    <languages/>
+    <config>
+        <fields name="params" addfieldpath="/modules/mod_sj_instagram_gallery/core/fields">
+            <fieldset name="basic">
+                <field name="type_show" type="list" class="btn-group" default="simple" label="Type Show"
+                       description="The Type shows when you click on the type show">
+                    <option value="simple">Simple</option>
+                    <option value="slider">Slider</option>
+                </field>
+                <field name="nb_rows" type="integer" class="btn-group" default="1" label="# Rows"
+                       description="The Type shows when you click on the rows" first="1" last="10" step="1" />
+                <field name="header1" type="sjheading" class="text"
+                       label="For devices have screen width from 1200px to greater."
+                        />
+                <field name="nb-column1" type="integer" default="4" label="# Column"
+                       description="For devices have screen width from 1200px to greater." first="1" last="6" step="1" />
+                <field name="header2" type="sjheading" class="text"
+                       label="For devices have screen width from 768px up to 1199px."
+                        />
+                <field name="nb-column2" type="integer" default="4" label="# Column"
+                       description="For devices have screen width from 768px up to 1199px." first="1" last="6" step="1" />
+                <field name="header3" type="sjheading" class="text"
+                       label="For devices have screen width from 480px up to 767px."
+                        />
+                <field name="nb-column3" type="integer" default="2" label="# Column"
+                       description="For devices have screen width from 480px up to 767px." first="1" last="6" step="1" />
+                <field name="header4" type="sjheading" class="text"
+                       label="For devices have screen width less than or equal 479px"
+                        />
+                <field name="nb-column4" type="integer" default="1" label="# Column"
+                       description="For devices have screen width less than or equal 479px." first="1" last="6" step="1" />
+            </fieldset>
+
+            <fieldset name="SOURCE_OPTIONS_LABEL" label="SOURCE_OPTIONS_LABEL">
+                <field type="sjheading" label="For General"/>
+                <field name="title" type="text" default="" label="Title" required="true"
+                       description="Title"/>
+                <field name="show_title" label="Show Title" class="btn-group"
+                       description="Allow to show/hide title" type="radio" default="1">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="full_name" label="Hide Full Name" class="btn-group"
+                       description="Allow to show/hide full name" type="radio" default="1">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="target" label="Select target" class="btn-group"
+                       description="Select target" type="radio" default="_blank">
+                    <option value="_blank">Yes</option>
+                    <option value="_self">No</option>
+                </field>
+                <field name="target" type="list" class="btn-group" default="_blank" label="Select target"
+                       description="The Type shows when you click on the type show">
+                    <option value="_blank"> Blank</option>
+                    <option value="_self"> Self</option>
+                </field>
+                <field name="users_id" type="text" default="" label="Instagram Users ID" required="true"
+                       description="Instagram Users ID."/>
+                <field name="access_token" type="text" default="" label="Access Token" required="true"
+                       description="Access Token."/>
+                <field name="limit_image" type="text" default="8" label="Limit Images" required="true"
+                       description="Maximum number of products to display. Enter 0 for unlimited selection."/>
+            </fieldset>
+
+            <fieldset name="effect_options" label="Effect Options">
+                <field name="header6" type="sjheading" class="text"
+                       label="For Type Show Slider."
+                        />
+                <field name="autoplay" label="Auto Play" class="btn-group"
+                       description="Allow to show/hide navigation for Auto Play" type="radio" default="1">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="display_nav" label="Display Navigation" class="btn-group"
+                       description="Allow to show/hide navigation for slider" type="radio" default="1">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="display_loop" label="Display Loop" class="btn-group"
+                       description="Infinity loop. Duplicate last and first items to get loop illusion." type="radio" default="1">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="touchdrag" label="Touch Drag" class="btn-group"
+                       description="Touch drag enabled" type="radio" default="1">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="mousedrag" label="Mouse Drag" class="btn-group"
+                       description="Mouse drag enabled" type="radio" default="1">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="pausehover" label="Pause On Hover" class="btn-group"
+                       description="Pause on mouse hover" type="radio" default="1">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="autoplay_timeout" label="Auto Interval Timeout" default="5000" type="text" required="true"
+                       description="Autoplay interval timeout for slider.">
+                </field>
+                <field name="autoplay_speed" label="Auto Play Speed" default="2000" type="text" required="true"
+                       description="Auto play speed for slider.">
+                </field>
+            </fieldset>
+
+            <fieldset name="advanced">
+                <field name="layout" type="modulelayout"
+                       label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC"/>
+                <field name="include_jquery" type="radio" class="btn-group" default="0"
+                       label="INCLUDE_JQUERY_LABEl" description="INCLUDE_JQUERY_DESC">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </field>
+                <field name="pretext" type="textarea" default="" label="PRE_TEXT_LABEL"
+                       description="PRE_TEXT_DESC" cols="40" rows="4" filter="raw"/>
+                <field name="posttext" type="textarea" default="" label="POST_TEXT_LABEL"
+                       description="POST_TEXT_DESC" cols="40" rows="4" filter="raw"/>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

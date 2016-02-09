@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="1.6.0"
+	client="site"
+	method="upgrade">
+    <name>Twitter Ticker</name>
+	<author>YouTechClub.Com</author>
+	<creationDate>Apr 2011</creationDate>
+    <copyright>Copyright (C) 2010 YouTechClub.Com</copyright>
+	<license>GNU General Public License version 2 or later; see
+		LICENSE.txt</license>
+	<authorEmail>contact@youtechclub.com</authorEmail>
+	<authorUrl>http://www.youtechclub.com</authorUrl>
+	<version>1.0</version>
+	<description>TWITTERSLIDER</description>
+    <files>
+         <filename module="mod_twitter_ticker">mod_twitter_ticker.php</filename>
+         <filename module="mod_twitter_ticker">mod_twitter_ticker.xml</filename>             
+         <folder module="mod_twitter_ticker">assets</folder>
+         <folder module="mod_twitter_ticker">tmpl</folder>
+     </files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_twitter_ticker.ini</language>
+	</languages>
+    <help key="JHELP_EXTENSIONS_MODULE_MANAGER_ARTICLES_CATEGORY" />
+    <config>
+	<fields name="params">
+		<fieldset name="general_settings" label="General Setting" addfieldpath="/modules/mod_twitter_ticker/elements">
+        <!-- Group 1: Article Filter -->
+            <field name="moduleclass_sfx" type="text"
+				label="Suffix Class"
+				description="Suffix Class" />                 
+            
+            <field name="module_width" type="text" default="200"
+				label="Module Width"
+				description="Module Width DESC" />
+            <field name="module_height" type="text" default="300"
+				label="Module Height"
+				description="Module Height DESC" />
+			
+            <field name="tweetUsers" type="text" default="tinytheme,ytcvn"
+				label="Tweet Users "
+				description="Using this format: tweetuser1,tweetuser2" />
+            <field name="tweet_title" type="text" default="My tweets"
+				label="Tweet Title"
+				description="The title for your Tweets" />
+           
+        <!-- End Group 1: Article Filter -->
+        </fieldset>
+       	
+	</fields>
+	</config>
+</extension>

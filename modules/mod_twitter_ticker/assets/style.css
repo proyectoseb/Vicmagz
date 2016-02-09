@@ -1,0 +1,111 @@
+
+.twitter-ticker h2.tut{
+	color:white;
+	font-family:"Myriad Pro",Arial,Helvetica,sans-serif;
+	font-size:16px;
+	padding:12px 0 0 58px;
+	text-transform:uppercase;
+	
+	text-shadow:2px 1px 6px #333;
+}
+
+.twitter-ticker {
+	
+	background:url(slickbg.png) no-repeat #f5f5f5;
+	color:#666666;
+	display:none;
+	
+	-moz-border-radius:10px 10px 6px 6px;
+	-khtml-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius:6px;
+
+	text-align:left;
+}
+
+.twitter-ticker #tweet-container{
+	width:auto;
+	overflow:hidden;
+}
+
+.twitter-ticker  #twitIcon{
+	position:absolute;
+	top:-25px;
+	left:-10px;
+	width:64px;
+	height:64px;
+}
+
+.twitter-ticker  #top-bar{
+	height:45px;
+	background:url(top_bar.png) repeat-x;
+	border-bottom:1px solid white;
+	position:relative;
+	margin-bottom:8px;
+	
+	-moz-border-radius:6px 6px 0 0;
+}
+
+.twitter-ticker  .tweet{
+	padding:5px;
+	margin:0 8px 8px;
+	
+	border:1px solid #F0F0F0;
+	background:url(transparent.png);
+	
+	width:auto;
+	overflow:hidden;
+}
+
+.twitter-ticker .tweet .avatar,
+.twitter-ticker .tweet .user,
+.twitter-ticker .tweet .time{
+	float:left;
+}
+
+.twitter-ticker .tweet .time{
+	text-transform:uppercase;
+	font-size:10px;
+	color:#AAAAAA;
+	white-space:nowrap;
+}
+
+
+.twitter-ticker  .tweet .avatar img{
+	width:36px;
+	height:36px;
+	border:2px solid #eeeeee;
+	margin:0 5px 5px 0;
+}
+
+.twitter-ticker .tweet .txt{
+	clear:both;
+}
+
+.twitter-ticker .tweet .user{
+	font-weight:bold;
+}
+
+.twitter-ticker  a, .twitter-ticker  a:visited {
+	color:#00BBFF;
+	text-decoration:none;
+	outline:none;
+}
+
+.twitter-ticker a:hover{
+	text-decoration:underline;
+}
+
+.twitter-ticker  #loading{
+	margin:100px 95px;
+}
+
+/* The styles below are only necessary for the demo page */
+
+.twitter-ticker  p{
+	padding-top:7px;
+}
+
+#twitter-ticker{
+	margin:40px auto 20px;
+}
